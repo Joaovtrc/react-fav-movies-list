@@ -40,7 +40,7 @@ class App extends Component {
 
 				{Object.keys(users).map((key, user) =>
                                         
-                    <ListItem key={key}>
+                    <ListItem key={users[key].id}>
 
                       { ` ${key} - ${users[key].name} favorite movie is ${getFavoriteMovie(users[key].id) } ` }
 
