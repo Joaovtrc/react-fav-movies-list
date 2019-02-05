@@ -1,5 +1,5 @@
 
-![alt text](https://raw.githubusercontent.com/Joaovtrc/react-fav-movies-list/master/screenshot.png)
+![alt text](https://raw.githubusercontent.com/Joaovtrc/react-fav-movies-list/master/screenshot.png.jpg)
 
 
 <<<<<<< HEAD
