@@ -6,6 +6,9 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
 
 import { profiles, users, movies }  from './FakeAPI.js'
 /*
@@ -35,16 +38,22 @@ class App extends Component {
                   
     return (
       <div>
-        <h2>Favorite Movies</h2>
-             <List component="nav">
-
+			<AppBar position="static" color="default">
+				<Toolbar className='main-toolbar'>
+					<Typography variant="h6" color="inherit">
+						Photos
+					</Typography>
+				</Toolbar>
+			</AppBar>
+      
+			<List component="nav">
 				{Object.keys(users).map((key, user) =>
-                                        
-                    <ListItem key={users[key].id}>
-
-                      { ` ${key} - ${users[key].name} favorite movie is ${getFavoriteMovie(users[key].id) } ` }
-
-                    </ListItem>
+				<span>                    
+					<ListItem key={users[key].id}>
+						{ ` ${key} - ${users[key].name} favorite movie is ${getFavoriteMovie(users[key].id) } ` }
+					</ListItem>
+      				<Divider />
+				</span>
 				)}
       
 
